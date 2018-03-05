@@ -22,9 +22,11 @@ const ScorePanel = {
             ScorePanel.star = 1;
             Rating.setStars(1);
         } else {
+            // do nothing.
             
         }
     },
+    //reset every thing to the start
     reset : () => {
         ScorePanel.move = 0;
         ScorePanel.star = 3;
@@ -36,11 +38,11 @@ const ScorePanel = {
 }
 Object.seal(ScorePanel);
 
-
+//Timer global variable
 let Timer;
 
 
-
+//represents card's symbol
 const Symbol = {
     ANCHOR :    'fa fa-anchor',
     BICYCLE :   'fa fa-bicycle',
@@ -51,16 +53,16 @@ const Symbol = {
     LEAF :      'fa fa-leaf',
     PLANE :     'fa fa-paper-plane-o',    
 }
-
+//method freezes an object: that is, prevents new properties from being added to it; prevents existing properties from being removed
 Object.freeze(Symbol);
 
-
+//represents card's state:as if it is matched or opend or closed
 const State = {
     CLOSED :    'card',
     OPENED :    'card open show',
     MATCHED :   'card open match',
 }
-
+//keep every thing
 Object.freeze(State);
 
 
@@ -105,7 +107,7 @@ const Deck = {
             Deck.matched.push(c0, c1);
             Deck.opened.length = 0;
         }
-
+         // win condition
         if (Deck.matched.length === Deck.cards.length) {
             clearInterval(Timer);
             Rating.hideStartButton(false);
@@ -116,7 +118,7 @@ const Deck = {
 Object.freeze(Deck);
 Object.seal(Deck.cards)
 
-
+//Rating is a layer between model and view so all changes in DOM has be in ViewChanger class
 
 class Rating {
     static setStars(numOfStars) {
@@ -173,7 +175,7 @@ class Rating {
 
 }
 
-
+//methods for user's actions
 class EventListener {
     static setClickToStart() {
         const d = document.getElementsByClassName('modal')[0];
@@ -199,7 +201,7 @@ class EventListener {
     }
 }
 
-
+//has a event handler methods for user's action.
 class EventHandler {
     static clickCard(e) {
 
