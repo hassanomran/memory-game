@@ -9,6 +9,7 @@ Each turn:
 4. If the cards do not match, both cards are flipped face down.
 
 ## Game Functionality
+
 The real-life game, players flip over cards to locate the pairs that match The goal is to recreate this effect in your project. There are a couple of interactions that you'll need to handle:
 1. Flipping cards
 2. What happens when cards match
@@ -16,15 +17,19 @@ The real-life game, players flip over cards to locate the pairs that match The g
 4. When the game finishes
 
 #### Interactivity Guideline
+
 Keep in mind that the specific functionality demonstrated here (e.g. a card performs a horizontal flip when clicked) is an example. You do not need to have this exact functionality.
 
 ### Development Strategy
+
 It's very important that you plan your project before you start writing any code. Break your project down into *small* pieces of work and plan out your approach to each one. It's much easier to debug and fix an issue if you've only made a small change. It becomes much harder if you wait longer to test your code. You don't build a house all at once, but brick by brick.
 
 1. Start by building a very simple grid of cards.
 2.  Don't worry about styling, just get something clickable on the page.
-3. Figure out the HTML needed to represent a card. Remember, you have to represent two sides of the card. Are you going to have two
-###separate elements stacked on top of each other?
+3. Figure out the HTML needed to represent a card. Remember, you have to represent two sides of the card.
+
+###Are you going to have twoseparate elements stacked on top of each other?
+
 1. Add the functionality to handle clicks.
 2. This should reveal the hidden side of each card.
 3. Work on the matching logic. How does your game "know" if a player guesses correctly or incorrectly?
