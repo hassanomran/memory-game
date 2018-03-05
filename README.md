@@ -28,7 +28,7 @@ It's very important that you plan your project before you start writing any code
 2.  Don't worry about styling, just get something clickable on the page.
 3. Figure out the HTML needed to represent a card. Remember, you have to represent two sides of the card.
 
-###Are you going to have twoseparate elements stacked on top of each other?
+### Are you going to have twoseparate elements stacked on top of each other?
 
 1. Add the functionality to handle clicks.
 2. This should reveal the hidden side of each card.
